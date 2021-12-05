@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-import Image from 'next/image';
-
-import CandyMachine from '../comp/CandyMachine';
-
-import Ball_0 from '../assets/0.png';
-import Ball_1 from '../assets/1.png';
-import Ball_2 from '../assets/2.png';
+import CandyMachine from '../comp/candyMachine';
 
 export default function Home() {
     const [walletAddress, setWalletAddress] = useState(null);
@@ -72,17 +66,6 @@ export default function Home() {
                         {!walletAddress && renderNotConnectedContainer()}
                     </div>
                     {walletAddress && <CandyMachine walletAddress={window?.solana} />}
-                    {/* <div className="collections">
-                        <div>
-                            <Image src={Ball_0} alt="Ball 1" quality={100} width={236} height={236} />
-                        </div>
-                        <div>
-                            <Image src={Ball_1} alt="Ball 2" quality={100} width={301} height={336} />
-                        </div>
-                        <div>
-                            <Image src={Ball_2} alt="Ball 3" quality={100} width={320} height={303} />
-                        </div>
-                    </div> */}
                 </div>
             </section>
         </main>
